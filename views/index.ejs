@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+    <head>
+        <title>IASA Schduler Webapp</title>
+        <link href ="Style.css" rel = "stylesheet" type = "text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type = "module" src="Script.js"></script>
+    </head>
+    <body>
+        <div class= "topTitleBar">
+            <p>INDIAN AMERICAN STUDENT ASSOCIATION</p>
+        </div>
+        <div class = "memberInput">
+            <div class = "nameInput">
+                <label for="fname">Member Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="">
+            </div>
+            <div class = "gradeInput">
+                <p> Grade </p>
+                <div class = "grade">
+                    <input type="radio" id="ninth" name = "Grade"/>
+                    <label for = "ninth"> 9th </label>
+                </div>
+                <div class = "grade">
+                    <input type="radio" id="tenth" name = "Grade"/>
+                    <label for = "tenth"> 10th </label>
+                </div>
+                <div class = "grade">
+                    <input type="radio" id="eleventh" name = "Grade"/>
+                    <label for = "eleventh"> 11th </label>
+                </div>
+                <div class = "grade">
+                    <input type="radio" id="twelfth" name = "Grade"/>
+                    <label for = "twelfth"> 12th </label>
+                </div>
+            </div>
+            <div class = "schoolInput">
+                <p> School </p>
+                <div class = "school">
+                    <input type="radio" id="Stevenson" name = "School"/>
+                    <label for = "Stevenson"> Stevenson </label>
+                </div>
+                <div class = "school">
+                    <input type="radio" id="Ford" name = "School"/>
+                    <label for = "Ford"> Ford </label>
+                </div>
+                <div class = "school">
+                    <input type="radio" id="Utica" name = "School"/>
+                    <label for = "Utica"> Utica </label>
+                </div>
+                <div class = "school">
+                    <input type="radio" id="Eisenhower" name = "School"/>
+                    <label for = "Eisenhower"> Eisenhower </label>
+                </div>
+                <div class = "school">
+                    <input type="radio" id="UAIS" name = "School"/>
+                    <label for = "UAIS"> UAIS </label>
+                </div>
+            </div>
+            <div class = "danceButtons">
+                <button name = "Classical" class = "dance"> Classical </button>
+                <button name = "Bollywood" class = "dance"> Bollywood </button>
+                <button name = "HipHop" class = "dance"> Hip-Hop </button>
+                <button name = "SouthIndian" class = "dance"> South Indian </button>
+                <button name = "Bhangra" class = "dance"> Bhangra </button>
+                <button name = "AllGirlsFusion" class = "dance"> All-Girls Fusion </button>
+                <button name = "SeniorFusion" class = "dance"> Senior Fusion </button>
+                <button name = "Jazba" class = "dance"> Jazba </button>
+            </div>
+            <div class = "submit">
+                <button class = "submitButton"> Submit </button>
+            </div>
+        </div>
+        <div id="mydiv" data-test=<%= memberArray %>></div>
+
+         <div class = "Schedule">
+            <table id = "PracticeSchedule" class = "ScheduleTables">
+                <thead>
+                    <tr>
+                        <th>Practice Schedule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id = "PracticeOrder"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table id = "ShowSchedule" class = "ScheduleTables">
+                <thead>
+                    <tr>
+                        <th>Show Schedule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id = "ShowOrder"></td>
+                    </tr>
+                </tbody>
+            </table>
+         </div>
+
+        <div class = "memberDisplay">
+
+            <table id = "classicalTable" class = "danceTable">
+                <thead>
+                    <tr>
+                        <th>Classical</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('partials/tablePartial.ejs', {memberArray:memberArray, buttonName: "Classical"}); %>
+                </tbody>
+            </table>
+            <table id = "bollywoodTable" class = "danceTable">
+                <thead>
+                    <tr>
+                        <th>Bollywood</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('partials/tablePartial.ejs', {memberArray:memberArray, buttonName: "Bollywood"}); %>
+                </tbody>
+            </table>
+            <table id = "HipHopTable" class = "danceTable">
+                <thead>
+                    <tr>
+                        <th>Hip-Hop</th>
+                    </tr>
+                </thead>
+                    <%- include('partials/tablePartial.ejs', {memberArray:memberArray, buttonName: "HipHop"}); %>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <table id = "SouthIndianTable" class = "danceTable">
+                <thead>
+                    <tr>
+                        <th>South Indian</th>
+                    </tr>
+                </thead>
+                    <%- include('partials/tablePartial.ejs', {memberArray:memberArray, buttonName: "SouthIndian"}); %>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <table id = "BhangraTable" class = "danceTable">
+                <thead>
+                    <tr>
+                        <th>Bhangra</th>
+                    </tr>
+                </thead>
+                    <%- include('partials/tablePartial.ejs', {memberArray:memberArray, buttonName: "Bhangra"}); %>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <table id = "AllGirlsFusionTable" class = "danceTable">
+                <thead>
+                    <tr>
+                        <th>All Girls Fusion</th>
+                    </tr>
+                </thead>
+                    <%- include('partials/tablePartial.ejs', {memberArray:memberArray, buttonName: "AllGirlsFusion"}); %>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <table id = "SeniorFusionTable" class = "danceTable">
+                <thead>
+                    <tr>
+                        <th>Senior Fusion</th>
+                    </tr>
+                </thead>
+                    <%- include('partials/tablePartial.ejs', {memberArray:memberArray, buttonName: "SeniorFusion"}); %>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <table id = "JazbaTable" class = "danceTable">
+                <thead>
+                    <tr>
+                        <th>Jazba</th>
+                    </tr>
+                </thead>
+                    <%- include('partials/tablePartial.ejs', {memberArray:memberArray, buttonName: "Jazba"}); %>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

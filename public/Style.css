@@ -1,0 +1,410 @@
+html, body{
+	background-color: #fff;
+	margin: 0;
+	height: 100%;
+	font-family: Segoe UI, sans-serif;
+	font-weight: bold;
+}
+
+}
+
+*{
+	margin 0;
+	box-sizing: border-box;
+}
+.topTitleBar {
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background: #4284f5;
+  font-family: ariel;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+}
+
+.memberInput{
+  margin: 0 auto;
+  border-right: 2px solid black;
+  width: 20%;
+  float: left;
+  position: sticky;
+  top:;
+
+}
+.nameInput {
+	margin-top: 15px;
+
+}
+
+.nameInput input[type=text]{
+	width:90%;
+	border: 2px solid #aaa;
+	border-radius: 4px;	
+	margin: 10px;
+	margin-top: 5px;
+	outline: none;
+	padding: 10px;
+	box-sizing: border-box;
+	transition: .3s;
+	margin-bottom: 00px;
+}
+
+.nameInput label{
+    font-family: Segoe UI, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-left: 5px solid black;
+
+}
+
+.nameInput input[type=text]:focus{
+	border-color: dodgerBlue;
+	box-shadow: 0 0 1pc 0 dodgerBlue;
+}
+
+.gradeInput p {
+	margin-bottom: 5px;
+	margin-left: 10px;
+	border-left: 5px solid black;
+	padding-left: 5px;
+	font-size: 20px
+}
+
+.gradeInput{
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.gradeInput .grade {
+	padding: 5px 10px;
+	margin : 0;
+}
+
+.gradeInput input[type = "radio"]{
+	display: none;
+	margin: .2em;
+	cursor: pointer;
+}
+
+.gradeInput label {
+	position: relative;	
+	cursor: pointer;
+}
+
+.gradeInput label::before{
+	content:"\2714";
+	background-position: left;
+	background-size: contain;
+	position: left;
+	left: 5px;
+	top: 5px;
+	border: .1em solid #000;
+	border-radius: .2em;
+	display: inline-block;
+	width: 1em;
+	height:1em;
+	padding-left: .2em;
+	padding-bottom: .3em;
+	margin-right: .2em;
+	vertical-align: bottom;
+	color:transparent;
+	transition: .3s;
+}
+
+.gradeInput input[type = "radio"]:checked + label:before{
+	background-color: dodgerBlue;
+	border-color:dodgerBlue;
+	color:#fff;
+}
+
+.gradeInput input[type = "radio"] + label:active:before{
+	transform: scale(0);
+}
+.schoolInput p {
+	margin-bottom: 0;
+	margin-left: 10px;
+	border-left: 5px solid black;
+	padding-left: 5px;
+	font-size: 20px
+}
+
+.schoolInput{
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.schoolInput .school {
+	padding: 5px 10px;
+	margin : 0;
+}
+
+.schoolInput input[type = "radio"]{
+	display: none;
+	margin: .2em;
+	cursor: pointer;
+}
+
+.schoolInput label {
+	position: relative;	
+	cursor: pointer;
+}
+
+.schoolInput label::before{
+	content:"\2714";
+	background-position: left;
+	background-size: contain;
+	position: left;
+	left: 5px;
+	top: 5px;
+	border: .1em solid #000;
+	border-radius: .2em;
+	display: inline-block;
+	width: 1em;
+	height:1em;
+	padding-left: .2em;
+	padding-bottom: .3em;
+	margin-right: .2em;
+	vertical-align: bottom;
+	color:transparent;
+	transition: .3s;
+}
+
+.schoolInput input[type = "radio"]:checked + label:before{
+	background-color: dodgerBlue;
+	border-color:dodgerBlue;
+	color:#fff;
+}
+
+.schoolInput input[type = "radio"] + label:active:before{
+	transform: scale(0);
+}
+.danceButtons{
+	margin-top: 15px;
+}
+.danceButtons button{
+	padding:8px 12px;
+	margin: 4px;
+	border: 0px;
+	outline:0px;
+	border-radius: 8px;
+	cursor: pointer;	
+	position: relative;
+	overflow: hidden;
+	transition: .1s;
+	width:90%;
+	height:35px;
+	margin-left: 14px;
+}
+.danceButtons button:active{
+	background: dodgerBlue;
+	color: #fff;
+	font-weight: bolder;
+
+}
+.danceButtons button:target{
+	background: dodgerBlue;
+	color: #fff;
+	font-weight: bolder;
+
+}
+
+.danceButtons .clicked {
+	background: dodgerBlue;
+	color: #fff;
+}
+
+
+.danceButtons button:before{
+	content:"";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #000;
+	z-index: -1;
+	transform: scale(.3);
+	transition: .1s;
+	opacity: 0;
+	visibility: hidden;
+}
+.danceButtons button:hover{
+	color:#fff;
+	background-color: dodgerBlue;
+    box-shadow: 0 0 1pc 0 dodgerBlue;
+
+
+}
+.danceButtons button:hover:before{
+	transform: scale(1);
+	opacity: 1;
+	visibility: visible;
+
+}
+
+.submit{
+	margin-top: 8px;
+	margin-left: 25%;
+}
+.submit button{
+	padding:8px 12px;
+	margin: 4px;
+	border: 0px;
+	outline:0px;
+	border-radius: 8px;
+	cursor: pointer;	
+	position: relative;
+	overflow: hidden;
+	transition: .1s;
+	background-color: dodgerBlue;
+	color:white;
+	width:50%;
+	height:35px;
+	margin-left: 14px;
+
+}
+.submit button:active{
+	background: dodgerBlue;
+	color: #fff;
+	font-weight: bolder;
+
+}
+
+.submit button:before{
+	content:"";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #000;
+	z-index: -1;
+	transform: scale(.3);
+	transition: .1s;
+	opacity: 0;
+	visibility: hidden;
+}
+.submit button:hover{
+	color:#fff;
+	background-color: dodgerBlue;
+	box-shadow: 0 0 1pc 0 dodgerBlue;
+
+}
+.submit button:hover:before{
+	transform: scale(1);
+	opacity: 1;
+	visibility: visible;
+
+}
+
+.memberDisplay{
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.danceTable{
+	border-collapse: collapse;
+	margin:3%;
+	font-size: 1.2em;
+	min-width: 400px;
+	border-radius: 8px 8px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+	font-family: Segoe UI, sans-serif;
+
+}
+
+.danceTable thead tr{
+	background-color: dodgerBlue;
+	color:white;
+	text-align: center;
+	font-weight: bolder;
+	border-radius: 8px;
+
+}
+
+.danceTable th,
+.danceTable tr{
+	padding: 12px 15px;
+}
+
+.danceTable tbody tr{
+	border-bottom:1px solid #ddd;
+}
+
+.danceTable tbody tr:nth-of-type(even){
+	background-color: #f3f3f3;
+}
+
+.danceTable tbody tr:last-of-type{
+	border-bottom: 2px solid dodgerBlue;
+}
+.danceTable tbody tr td{
+	text-align: center;
+	font-weight: bold;
+	font-family: Segoe UI, sans-serif;
+
+}
+
+.Schedule{
+	
+}
+
+.ScheduleTables{
+	border-collapse: collapse;
+	margin:1%;
+	font-size: 1.2em;
+	min-width: 400px;
+	border-radius: 8px 8px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+	font-family: Segoe UI, sans-serif;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ScheduleTables thead tr{
+	background-color: dodgerBlue;
+	color:white;
+	text-align: center;
+	font-weight: bolder;
+	border-radius: 8px;
+
+}
+
+.ScheduleTables th,
+.ScheduleTables tr{
+	padding: 12px 15px;
+}
+
+.ScheduleTables tbody tr{
+	border-bottom:1px solid #ddd;
+}
+
+.ScheduleTables tbody tr:nth-of-type(even){
+	background-color: #f3f3f3;
+}
+
+.ScheduleTables tbody tr:last-of-type{
+	border-bottom: 2px solid dodgerBlue;
+}
+.ScheduleTables tbody tr td{
+	text-align: center;
+	font-weight: bold;
+	font-family: Segoe UI, sans-serif;
+
+}
