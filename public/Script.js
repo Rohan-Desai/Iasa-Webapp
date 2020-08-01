@@ -53,16 +53,16 @@ $(document).ready(function() {
 	}
 
 	function postMemberInfo() {
-		const url = 'http://localhost:3000/';
+		const url = 'https://iasa-scheduler.herokuapp.com/';
 
 		$.post(url, extractMemberInfo(), function(data, status) {
 			location.reload();
 		});
 	}
 
-	function getMemberArray() {
+	function getMemberArray() {	
 
-		const url = 'http://localhost:3000/memberdata';
+		const url = 'https://iasa-scheduler.herokuapp.com/';
 		$.get(url, function(data, status) {
 			var memberArray = data;
 			let danceArray = ["Classical", "Bollywood", "HipHop", "SouthIndian", "Bhangra", "AllGirlsFusion", "SeniorFusion", "Jazba"];
