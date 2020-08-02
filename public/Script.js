@@ -85,7 +85,7 @@ $(document).ready(function() {
 		}
 
 		for(let i = 0; i < ordering[0].length - 1; i++){
-		    order = order.replace(" ", "-->");
+		    order = order.replace(" ", "&#10230");
 		}
 		return order;
 	}
