@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Connnect to database
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const db = mongoose.connection;
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_URI, {
@@ -31,14 +31,14 @@ db.once('open', function() {
 
 
 // Schema and model
-var memberSchema = new mongoose.Schema({
+const memberSchema = new mongoose.Schema({
 	name: String,
 	grade: String,
 	school: String,
 	dances: [String]
 });
 
-var Member = mongoose.model("Member", memberSchema);
+const Member = mongoose.model("Member", memberSchema);
 
 
 // Routes
