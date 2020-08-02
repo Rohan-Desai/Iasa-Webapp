@@ -1,12 +1,12 @@
 {
   "name": "iasawebapp",
   "version": "1.0.0",
-  "description": "webapp for iasa that can schedule practices and create show order wwhole storing and displaying members for dances",
+  "description": "Webapp for IASA that stores dance rosters and optimally schedules practices/shows",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Rohan Desai",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
