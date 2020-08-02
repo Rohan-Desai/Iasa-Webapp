@@ -3,6 +3,7 @@
 export class WeightedGraph {
 	constructor(memberArray, dances) {
 		this.memberArray = memberArray;
+		console.log(this.memberArray);
 		this.dances = dances;
 		return this.calculateEdgeWeights();
 	}
