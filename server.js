@@ -4,6 +4,8 @@ const ejs = require('ejs');
 const bodyParser = require("body-parser");
 const app = express();
 
+require('dotenv').config();
+
 // Express Settings
 app.set('view engine', 'ejs');
 const port = process.env.PORT || 3000;
@@ -19,7 +21,7 @@ app.use(bodyParser.json());
 var mongoose = require("mongoose");
 const db = mongoose.connection;
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/mongoDb', {
+mongoose.connect(process.env.MONGO_URI, {
 	useNewUrlParser: true
 });
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -57,7 +59,10 @@ app.get("/memberdata", (req, res) => {
 app.post("/", (req, res) => {
 	const newMember = new Member(req.body);
 	newMember.save(function(err) {
-		if (err) return handleError(err);
+		if (err) {
+			console.log(err);
+			return;
+		}
 		console.log("saved");
 		res.sendStatus(200);
 	});
