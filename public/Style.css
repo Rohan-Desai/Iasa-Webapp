@@ -31,9 +31,7 @@ html, body{
   width: 20%;
   float: left;
   position: sticky;
-  top:;
-
-
+  border-bottom: 2px solid black;
 }
 .nameInput {
 	margin-top: 15px;
@@ -360,17 +358,26 @@ html, body{
 
 }
 
+@media screen and (max-width: 600px){
+	.ScheduleTables{
+		max-width: 75%;
+		max-width: 300px;
+	}
+}
+
 .ScheduleTables{
 	border-collapse: collapse;
 	margin:1%;
 	font-size: 1.2em;
-	min-width: 400px;
-	border-radius: 8px 8px 0 0;
+	min-width: 200px;
+	overflow-x: auto;
+	border-radius: 8px 8px 8px 8px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, .15);
 	font-family: Segoe UI, sans-serif;
 	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
+	display: flex;
 }
 
 .ScheduleTables thead tr{
@@ -388,7 +395,6 @@ html, body{
 }
 
 .ScheduleTables tbody tr{
-	border-bottom:1px solid dodgerblue;
 }
 
 .ScheduleTables tbody tr:nth-of-type(even){
@@ -396,11 +402,14 @@ html, body{
 }
 
 .ScheduleTables tbody tr:last-of-type{
-	border-bottom: 2px solid dodgerblue;
+	
 }
 .ScheduleTables tbody tr td{
 	text-align: center;
 	font-weight: bold;
 	font-family: Segoe UI, sans-serif;
+	padding-top: 1%;
+	padding-left: 15%;
+	text-decoration: underline solid dodgerblue;
 
 }
