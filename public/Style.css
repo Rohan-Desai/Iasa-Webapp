@@ -1,5 +1,4 @@
 html, body{
-	background-color: #fff;
 	margin: 0;
 	height: 100%;
 	font-family: Segoe UI, sans-serif;
@@ -17,7 +16,7 @@ html, body{
   width: 100%;
   padding: 0;
   margin: 0 auto;
-  background: #4284f5;
+  background: #0483ff;
   font-family: ariel;
   text-align: center;
   color: white;
@@ -34,10 +33,10 @@ html, body{
   position: sticky;
   top:;
 
+
 }
 .nameInput {
 	margin-top: 15px;
-
 }
 
 .nameInput input[type=text]{
@@ -343,6 +342,8 @@ html, body{
 
 .danceTable tbody tr{
 	border-bottom:1px solid #ddd;
+	background-color: white;
+	color:black;
 }
 
 .danceTable tbody tr:nth-of-type(even){
@@ -372,13 +373,13 @@ html, body{
 	overflow: hidden;
 	box-shadow: 0 0 20px rgba(0, 0, 0, .15);
 	font-family: Segoe UI, sans-serif;
-	width: 75%;
+	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .ScheduleTables thead tr{
-	background-color: dodgerBlue;
+	background-color: dodgerblue;
 	color:white;
 	text-align: center;
 	font-weight: bolder;
@@ -392,7 +393,7 @@ html, body{
 }
 
 .ScheduleTables tbody tr{
-	border-bottom:1px solid #ddd;
+	border-bottom:1px solid dodgerblue;
 }
 
 .ScheduleTables tbody tr:nth-of-type(even){
@@ -400,7 +401,7 @@ html, body{
 }
 
 .ScheduleTables tbody tr:last-of-type{
-	border-bottom: 2px solid dodgerBlue;
+	border-bottom: 2px solid dodgerblue;
 }
 .ScheduleTables tbody tr td{
 	text-align: center;
