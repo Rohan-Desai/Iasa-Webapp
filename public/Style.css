@@ -359,9 +359,13 @@ html, body{
 }
 
 @media screen and (max-width: 600px){
-	.ScheduleTables{
-		max-width: 75%;
-		max-width: 300px;
+	.ScheduleTables tbody tr td{
+	text-align: center;
+	font-weight: bold;
+	font-family: Segoe UI, sans-serif;
+	padding-top: 1%;
+	text-decoration: underline solid dodgerblue;
+
 	}
 }
 
