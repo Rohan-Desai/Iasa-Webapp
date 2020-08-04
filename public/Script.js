@@ -81,12 +81,13 @@ $(document).ready(function() {
 		var order = "";
 			
 		for(let i = 0; i < ordering[0].length; i++){
-		    order += ordering[0][i] + " ";
+		    order += ordering[0][i] + ",";
 		}
 
 		for(let i = 0; i < ordering[0].length - 1; i++){
-		    order = order.replace(" ", "&#10230");
+		    order = order.replace(",", "  &#10230  ");
 		}
+		order = order.replace(",", "");
 		return order;
 	}
 });

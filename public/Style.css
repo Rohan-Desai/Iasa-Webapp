@@ -378,7 +378,7 @@ html, body{
 	border-radius: 8px 8px 8px 8px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, .15);
 	font-family: Segoe UI, sans-serif;
-	width: 75%;
+	width: 65%;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -413,7 +413,6 @@ html, body{
 	font-weight: bold;
 	font-family: Segoe UI, sans-serif;
 	padding-top: 1%;
-	padding-left: 15%;
-	text-decoration: underline solid dodgerblue;
+	padding-left: 30px;
 
 }
