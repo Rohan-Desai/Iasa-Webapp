@@ -360,23 +360,17 @@ html, body{
 
 }
 
-.Schedule{
-	
-}
-
 .ScheduleTables{
 	border-collapse: collapse;
 	margin:1%;
 	font-size: 1.2em;
 	min-width: 400px;
 	border-radius: 8px 8px 0 0;
-	overflow: hidden;
 	box-shadow: 0 0 20px rgba(0, 0, 0, .15);
 	font-family: Segoe UI, sans-serif;
-	width: 70%;
+	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: auto;
 }
 
 .ScheduleTables thead tr{
@@ -384,7 +378,7 @@ html, body{
 	color:white;
 	text-align: center;
 	font-weight: bolder;
-	border-radius: 8px;
+	border-radius: 12px;
 
 }
 
